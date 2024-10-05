@@ -1,0 +1,16 @@
+{
+  "string": [
+    {
+      "name": "module_desc",
+      "value": "module description"
+    },
+    {
+      "name": "GinAbility_desc",
+      "value": "description"
+    },
+    {
+      "name": "GinAbility_label",
+      "value": "label"
+    }
+  ]
+}

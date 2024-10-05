@@ -1,0 +1,64 @@
+{
+  "module": {
+    "name": "Gin",
+    "type": "entry",
+    "description": "$string:module_desc",
+    "mainElement": "GinAbility",
+    "deviceTypes": [
+      "phone",
+      "tablet",
+      "2in1"
+    ],
+    "requestPermissions": [
+      {
+        "name": 'ohos.permission.INTERNET'
+      },
+      {
+        "name": "ohos.permission.READ_EXTERNAL_STORAGE"
+      },
+      {
+        "name": "ohos.permission.WRITE_EXTERNAL_STORAGE"
+      },
+
+    ],
+    "deliveryWithInstall": true,
+    "installationFree": false,
+    "pages": "$profile:main_pages",
+    "abilities": [
+      {
+        "name": "GinAbility",
+        "srcEntry": "./ets/ginability/GinAbility.ets",
+        "description": "$string:GinAbility_desc",
+        "icon": "$media:layered_image",
+        "label": "$string:GinAbility_label",
+        "startWindowIcon": "$media:startIcon",
+        "startWindowBackground": "$color:start_window_background",
+        "exported": true,
+        "skills": [
+          {
+            "entities": [
+              "entity.system.home"
+            ],
+            "actions": [
+              "action.system.home"
+            ]
+          }
+        ]
+      }
+    ],
+    "extensionAbilities": [
+      {
+        "name": "GinBackupAbility",
+        "srcEntry": "./ets/ginbackupability/GinBackupAbility.ets",
+        "type": "backup",
+        "exported": false,
+        "metadata": [
+          {
+            "name": "ohos.extension.backup",
+            "resource": "$profile:backup_config"
+          }
+        ],
+      }
+    ]
+  }
+}
